@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import LandingPage from "../components/LandingPage";
-import Register from "../components/Register";
-import Login from "../components/Login";
-import Home from "../components/Home";
-import UnAuthorized from "../components/UnAuthorized";
+import LandingPage from "../pages/LandingPage";
+import Register from "../pages/Register";
+import Login from "../pages/Login";
+import Home from "../pages/Home";
+import UnAuthorized from "../pages/UnAuthorized";
 import ProtectedRoute from "../components/ProtectedRoutes";
-import SessionExpired from "../components/SessionExpired";
-import AddBook from "../components/AddBook";
-import UpdateBook from "../components/UpdateBook";
+import SessionExpired from "../pages/SessionExpired";
+import AddBook from "../pages/AddBook";
+import UpdateBook from "../pages/UpdateBook";
 import UserBorrowedBooks from "../components/UserBorrowedBooks";
 import AdminBorrowedBooks from "../components/AdminBorrowedBooks";
-import NotFound from "../components/NotFound";
+import NotFound from "../pages/NotFound";
 
 const AppRoutes = () => {
   return (

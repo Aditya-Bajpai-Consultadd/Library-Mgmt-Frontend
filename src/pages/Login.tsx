@@ -90,6 +90,7 @@ export default function Login() {
             </div>
             {error && <p className="text-red-500 text-center">{error}</p>}
             <button
+              data-testid="login-btn"
               type="submit"
               className="group w-full rounded-2xl relative inline-flex h-12 items-center justify-center overflow-hidden  bg-neutral-950 px-6 font-medium text-neutral-50"
             >

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "./Header"; // Importing the Header
+import Header from "../components/Header"; // Importing the Header
 import apiCall from "../config/ApiConfig"; // Axios instance
 import { AxiosError } from "../models/AxiosError";
 

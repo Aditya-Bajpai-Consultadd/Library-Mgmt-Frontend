@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import BookItem from "./BookItem";
+import Header from "../components/Header";
+import BookItem from "../components/BookItem";
 import apiCall from "../config/ApiConfig";
 import BookResponse from "../models/Book";
 import { useAuth } from "../context/AuthContext";
@@ -188,7 +188,9 @@ const Home = () => {
               className="relative ml-4 rounded px-5 py-2.5 overflow-hidden group bg-blue-400  hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-300 text-white hover:ring-2 hover:ring-offset-2 hover:ring-blue-300 transition-all ease-out duration-200"
             >
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-              <span className="relative font-[Delius]">View Borrowed Books</span>
+              <span className="relative font-[Delius]">
+                View Borrowed Books
+              </span>
             </button>
           </div>
         )}
