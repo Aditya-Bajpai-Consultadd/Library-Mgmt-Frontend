@@ -16,9 +16,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" index element={<LandingPage />} />
-      <Route path="/unauthorized" element={<UnAuthorized />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/sessionExpired" element={<SessionExpired />} />
       <Route path="/login" element={<Login />} />
       <Route
         path="/home"
@@ -61,6 +59,8 @@ const AppRoutes = () => {
         }
       />
       <Route path="*" element={<NotFound />} />
+      <Route path="/unauthorized" element={<UnAuthorized />} />
+      <Route path="/sessionExpired" element={<SessionExpired />} />
     </Routes>
   );
 };
