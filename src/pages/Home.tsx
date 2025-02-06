@@ -23,7 +23,7 @@ const Home = () => {
     const fetchBooks = async () => {
       if (role === "Admin") {
         try {
-          const response = await apiCall.get("/admin/books");
+          const response = await apiCall.get<BookResponse[]>("/admin/books");
           setBooks(response.data);
           setFilterBook(response.data);
         } catch (err) {
@@ -39,7 +39,7 @@ const Home = () => {
         }
       } else if (role === "User") {
         try {
-          const response = await apiCall.get("/user/books");
+          const response = await apiCall.get<BookResponse[]>("/user/books");
           setBooks(response.data);
           setFilterBook(response.data);
         } catch (err) {
