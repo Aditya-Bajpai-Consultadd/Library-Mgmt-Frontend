@@ -34,35 +34,7 @@ export default function LandingPage() {
         <h1 className="text-2xl font-[Lato] font-bold">
           Library Management System
         </h1>
-        <div className="space-x-4">
-          <button
-            onClick={() => navigate("/login")}
-            id="navLoginBtn"
-            className="group relative h-10 rounded-full  border border-neutral-200 bg-white px-4 text-neutral-950"
-          >
-            <span className="relative inline-flex overflow-hidden">
-              <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] group-hover:skew-y-12">
-                Login
-              </div>
-              <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                Login
-              </div>
-            </span>
-          </button>
-          <button
-            onClick={() => navigate("/register")}
-            className="group relative h-10 rounded-full border border-neutral-200 bg-white px-4 text-neutral-950"
-          >
-            <span className="relative inline-flex overflow-hidden">
-              <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[110%] group-hover:skew-y-12">
-                Register
-              </div>
-              <div className="absolute translate-y-[110%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                Register
-              </div>
-            </span>
-          </button>
-        </div>
+        <div className="space-x-4"></div>
       </nav>
       <div className="flex-1  flex flex-col items-center justify-center text-center p-8 text-white">
         <h2 className="text-3xl font-[Lato] font-semibold mb-4">

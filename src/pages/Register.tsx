@@ -51,7 +51,7 @@ export default function Register() {
     >
       <nav className="bg-[#264653] h-16 text-white p-4 flex justify-between items-center shadow-md">
         <h1 className="text-2xl font-[Lato] font-bold">
-          Library Management System
+          <Link to={"/"}>Library Management System</Link>
         </h1>
       </nav>
       <div className="flex-1 flex items-center justify-center ">

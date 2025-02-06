@@ -42,7 +42,7 @@ export default function Login() {
     >
       <nav className="bg-[#264653] h-19 text-white p-4 flex justify-between items-center shadow-md">
         <h1 className="text-2xl font-[Lato] font-bold">
-          Library Management System
+          <Link to={"/"}>Library Management System</Link>
         </h1>
       </nav>
 

@@ -69,67 +69,70 @@ const UpdateBook = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <h1 className="text-3xl font-bold mb-4 p-6">Update Book</h1>
-      {error && <div className="text-red-500 mb-4 ml-3">{error}</div>}
-      <form
-        onSubmit={handleUpdate}
-        className="bg-white p-6 rounded-lg shadow-md"
-      >
-        <div className="mb-4">
-          <label className="block text-lg font-medium">Title</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            className="w-full p-3 border rounded-md"
-            required
-            placeholder="Enter book title"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-lg font-medium">Author</label>
-          <input
-            type="text"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-            className="w-full p-3 border rounded-md"
-            required
-            placeholder="Enter author's name"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-lg font-medium">Genre</label>
-          <input
-            type="text"
-            required
-            value={genre}
-            onChange={(e) => setGenre(e.target.value)}
-            className="w-full p-3 border rounded-md"
-            placeholder="Enter genre"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="flex items-center">
-            <input
-              type="checkbox"
-              checked={available}
-              onChange={() => setAvailable(!available)}
-              disabled={borrowed === 1}
-              className="mr-2"
-            />
-            Available
-          </label>
-          {borrowed === 1 && (
-            <p className="text-red-500 text-sm">Book is borrowed</p>
-          )}
-        </div>
-        <button
-          type="submit"
-          className="w-full font-[Delius] bg-green-600 hover:bg-green-700 text-white py-2 rounded-md"
+
+      <div className="mx-auto" style={{ width: "60%" }}>
+        <h1 className="text-3xl font-bold mb-4 p-6">Update Book</h1>
+        {error && <div className="text-red-500 mb-4 ml-3">{error}</div>}
+        <form
+          onSubmit={handleUpdate}
+          className="bg-white p-6 rounded-lg shadow-md"
         >
-          Update Book
-        </button>
-      </form>
+          <div className="mb-4">
+            <label className="block text-lg font-medium">Title</label>
+            <input
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className="w-full p-3 border rounded-md"
+              required
+              placeholder="Enter book title"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-lg font-medium">Author</label>
+            <input
+              type="text"
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+              className="w-full p-3 border rounded-md"
+              required
+              placeholder="Enter author's name"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-lg font-medium">Genre</label>
+            <input
+              type="text"
+              required
+              value={genre}
+              onChange={(e) => setGenre(e.target.value)}
+              className="w-full p-3 border rounded-md"
+              placeholder="Enter genre"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={available}
+                onChange={() => setAvailable(!available)}
+                disabled={borrowed === 1}
+                className="mr-2"
+              />
+              Available
+            </label>
+            {borrowed === 1 && (
+              <p className="text-red-500 text-sm">Book is borrowed</p>
+            )}
+          </div>
+          <button
+            type="submit"
+            className="w-full font-[Delius] bg-green-600 hover:bg-green-700 text-white py-2 rounded-md"
+          >
+            Update Book
+          </button>
+        </form>
+      </div>
       <div className="w-full flex justify-center items-center">
         <button
           onClick={() => navigate(-1)}

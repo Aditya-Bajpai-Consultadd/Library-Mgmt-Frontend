@@ -48,65 +48,78 @@ const AddBook = () => {
   return (
     <div className="min-h-screen bg-gray-100 ">
       <Header />
-      <h1 className="text-3xl font-bold mb-4 p-6">Add New Book</h1>
-
-      {error && <div className="text-red-500 mb-4 ml-3">{error}</div>}
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-lg shadow-md"
-      >
-        <div className="mb-4">
-          <label className="block text-lg font-medium">Title</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            className="w-full p-3 border rounded-md"
-            required
-            placeholder="Enter book title"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-lg font-medium">Author</label>
-          <input
-            type="text"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-            className="w-full p-3 border rounded-md"
-            required
-            placeholder="Enter author's name"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-lg font-medium">Genre</label>
-          <input
-            type="text"
-            value={genre}
-            required
-            onChange={(e) => setGenre(e.target.value)}
-            className="w-full p-3 border rounded-md"
-            placeholder="Enter genre"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="flex items-center">
-            <input
-              type="checkbox"
-              checked={available}
-              onChange={() => setAvailable(!available)}
-              className="mr-2"
-            />
-            Available
-          </label>
-        </div>
-        <button
-          type="submit"
-          className="w-full font-[Delius] bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md"
+      <div className="mx-auto" style={{ width: "60%" }}>
+        <h1
+          className="text-3xl font-bold font-[Sans] mb-4 p-6 "
+          style={{ paddingLeft: "0px" }}
         >
-          Add Book
-        </button>
-      </form>
+          Add New Book
+        </h1>
+
+        {error && <div className="text-red-500 mb-4 ml-3">{error}</div>}
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white p-6 rounded-lg shadow-md "
+        >
+          <div className="mb-4">
+            <label className="block text-lg font-medium font-[Delius]">
+              Title
+            </label>
+            <input
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className="w-full p-3 border rounded-md"
+              required
+              placeholder="Enter book title"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-lg font-medium font-[Delius]">
+              Author
+            </label>
+            <input
+              type="text"
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+              className="w-full p-3 border rounded-md"
+              required
+              placeholder="Enter author's name"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-lg font-medium font-[Delius]">
+              Genre
+            </label>
+            <input
+              type="text"
+              value={genre}
+              required
+              onChange={(e) => setGenre(e.target.value)}
+              className="w-full p-3 border rounded-md"
+              placeholder="Enter genre"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="flex font-[Delius] items-center">
+              <input
+                type="checkbox"
+                checked={available}
+                onChange={() => setAvailable(!available)}
+                className="mr-2"
+              />
+              Available
+            </label>
+          </div>
+          <button
+            type="submit"
+            className="w-full font-[Delius] bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md"
+          >
+            Add Book
+          </button>
+        </form>
+      </div>
       <div className="w-9//10 flex justify-center items-center">
         <button
           onClick={() => navigate(-1)}

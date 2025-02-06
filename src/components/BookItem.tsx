@@ -3,10 +3,12 @@ import BookItemProps from "../models/BookItemProps";
 const BookItem = ({ book, role, onAction }: BookItemProps) => {
   return (
     <tr className="border-b hover:bg-gray-100">
-      <td className="px-4 py-2">{book.title}</td>
-      <td className="px-4 py-2">{book.author}</td>
-      <td className="px-4 py-2">{book.genre}</td>
-      <td className="px-4 py-2 text-center">{book.available ? "Yes" : "No"}</td>
+      <td className="px-4 py-2 truncate">{book.title}</td>
+      <td className="px-4 py-2 truncate">{book.author}</td>
+      <td className="px-4 py-2 truncate">{book.genre}</td>
+      <td className="px-4 py-2 truncate text-center">
+        {book.available ? "Yes" : "No"}
+      </td>
       <td className="px-4 py-2 flex justify-center space-x-2">
         {role === "Admin" ? (
           <>

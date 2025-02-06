@@ -34,8 +34,8 @@ const AdminBorrowedBooks = () => {
             No books have been borrowed.
           </p>
         ) : (
-          <div className="bg-white shadow-md rounded-lg overflow-hidden">
-            <table className="w-full border-collapse">
+          <div className="bg-white w-full max-w-full shadow-md rounded-lg overflow-x-auto">
+            <table className="w-full min-w-max border-collapse">
               <thead className="bg-[#264653] text-white">
                 <tr>
                   <th className="px-4 py-2 text-left">Book ID</th>
