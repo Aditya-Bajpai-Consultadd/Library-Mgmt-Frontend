@@ -15,7 +15,10 @@ export default function Login() {
     setError(null);
 
     try {
-      const response = await apiCall.post("/login", { username, password });
+      const response = await apiCall.post<{
+        access_token: string;
+        token_type: string;
+      }>("/login", { username, password });
       const token = response.data.access_token;
       if (!token) {
         console.log("No Token Received");

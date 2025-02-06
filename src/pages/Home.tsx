@@ -168,6 +168,7 @@ const Home = () => {
           {role === "User" && (
             <div className="mb-6">
               <button
+                data-testid="Borrowed-btn"
                 onClick={() => navigate("/user/borrowedBooks")}
                 className="relative  rounded px-5 py-2.5 overflow-hidden group bg-blue-400  hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-300 text-white hover:ring-2 hover:ring-offset-2 hover:ring-blue-300 transition-all ease-out duration-200"
               >
